@@ -2,20 +2,20 @@ import java.util.Scanner;
 
 public class java_string {
     public static void main(String[] args) { 
-        
+
         Scanner sc = new Scanner(System.in);
 
         String first_string = sc.nextLine();
         String second_string = sc.nextLine();
         
-        int lenofFirstStr = first_string.length();
-        int lenofSecondStr = second_string.length();
+        int lenOfFirstStr = first_string.length();
+        int lenOfSecondStr = second_string.length();
 
-        System.out.println("The length of the first string is " + lenofFirstStr);
-        System.out.println("The length of the first string is " + lenofSecondStr);
+        System.out.println("The length of the first string is " + lenOfFirstStr);
+        System.out.println("The length of the first string is " + lenOfSecondStr);
 
         // Here we are comparing the length of given strings
-        if(lenofFirstStr == lenofSecondStr) 
+        if(lenOfFirstStr == lenOfSecondStr) 
         {
             System.out.println("The length of the two strings are the same");
         }
