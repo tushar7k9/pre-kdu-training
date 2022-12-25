@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - By Tushar</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav> 
+                <h1></h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li> 
+                    <li><a href="#portfolio">Project</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Tushar</span></h1>
+                <a href="images/Final Tushar Resume-compressed.pdf" download class="btn btn2"> Download CV</a>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Tushar_image.JPG" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, everyone! My name is Tushar and i'm from Gurgaon (Haryana). I'm currently studing Information Science and Engineering at RNS Institue of Technology and I'm really passionate about Competitive Programming and I'm always looking for new ways to learn and improve my skills.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <!-- <p class="tab-links" onclick="opentab('projects')">Projects</p> -->
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li>C++</li>
+                            <li>ReactJs</li>
+                            <li>JavaScript</li>
+                            <li>Competitive Programmer</li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="tab-content" id="projects">
+                        <ul>
+                            <li>C++</li>
+                            <li>ReactJs</li>
+                            <li>JavaScript</li>
+                            <li>Competitive Programmer</li>
+                        </ul>
+                    </div> -->
+
+                    <div class="tab-content" id="education">
+                         <table>
+                            <tr>
+                                <th>Qualifications</th>
+                                <th>Institute</th>
+                                <th>Year</th>
+                            </tr>
+                            <tr>
+                                <td>10th</td>
+                                <td>CD Sr Sec School</td>
+                                <td>2016</td>
+                            </tr>
+                            <tr>
+                                <td>12th</td>
+                                <td>CD International School</td>
+                                <td>2018</td>
+                            </tr>
+                            <tr>
+                                <td>B.E</td>
+                                <td>RNS Institute of Technology</td>
+                                <td>2023</td>
+                            </tr>
+                         </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="portfolio" id="portfolio">
+        <div class="container">
+            <h1 class="sub-title"> My Work </h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/image_5.png">
+                    <div class="layer">
+                        <h3>NFT Gallery</h3>
+                        <p>Art enthusiasts will be able to visit this one-of-a-kind art gallery to be only welcomed by a museum-like experience to view some spectacular works from various indie artists.</p>
+
+                        <a href="#"> > </a>
+
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/Screenshot from 2022-12-25 16-53-05.png">
+
+                    <div class="layer">
+                        <h3>3D Sorting Visualizer</h3>
+                        <p>Built React application for visualizing sorting algorithms.Implemented Bubble Sort , Merge Sort , Quick Sort , Insertion Sort and Selection Sort</p>
+
+                        <a href="https://tushhkashyap.github.io/Sorting-Visualizer/"> > </a>
+
+                    </div>
+                </div>
+
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>contact@gmail.com</p>
+                    <p>0123456789</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/tushar-kashyap-ab0964213/"><img src="images/linkedin.png" style="width:42px;height:42px;"></a>
+
+                        <a href="https://github.com/tushar7k9"><img src="images/github.png" style="width:42px;height:42px;" ></a>
+
+                        <a href="https://leetcode.com/Heyy_you12/"><img src="images/code.png" style="width:42px;height:42px;" ></a>
+
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+            <div class="copyright">
+                <p>Copyright © Tushar.</p>
+            </div>
+
+    </div>
+
+
+
+
+    
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname){
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
